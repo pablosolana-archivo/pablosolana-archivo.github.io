@@ -955,3 +955,23 @@ h3.post-title a:hover{color:#353535;text-decoration:underline}
 .pagination a{color:#8c0c0c;text-decoration:none;padding:0 8px}
 .pagination a:hover{color:#353535;text-decoration:underline}
 .pagination .current{padding:0 8px;color:#000}
+
+/* ===================================================================
+   AIRE A LA IZQUIERDA DE LA COLUMNA
+
+   El texto del lateral arrancaba a 10 px del borde del contenido,
+   mientras que del otro lado quedaban 30 px hasta el texto de las
+   notas. Con estos 20 px de sangria los dos margenes quedan iguales.
+   El ancho de la columna no cambia: box-sizing absorbe la sangria.
+   =================================================================== */
+#sidebar-left-1 {
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+/* las tapas de los libros, una debajo de otra */
+#HTML1 .widget-content img {
+  display: block;
+  width: 100%;
+  margin: 0 0 6px;
+}
