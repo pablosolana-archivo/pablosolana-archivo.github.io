@@ -1,3 +1,11 @@
+/* ===== TAMAÑOS QUE SE ELIGEN DESDE PUBLII =====
+   Ajustes del tema > pestaña "Textos". Publii escribe los valores como
+   variables (--nle-fecha, --nle-titulo, --nle-texto, --nle-leer,
+   --nle-etiquetas, --nle-lateral-titulos, --nle-lateral) en
+   partials/variables-css.hbs, y las reglas de abajo las usan con
+   var(--nle-..., valor original). Valen para computadora: en celulares mandan
+   los tamaños de la sección 8, al final de este archivo. */
+
 /* ===== la grilla del tema ===== */
 
       
@@ -646,14 +654,16 @@ html,body{margin:0;padding:0}
 /* --- repuesto: estilos de widget que Blogger sirve desde su dominio --- */
 .sidebar .widget{margin:0 0 30px}
 .sidebar .widget h2{font:bold 16px Arial,Tahoma,Helvetica,FreeSans,sans-serif;
+ font-size:var(--nle-lateral-titulos,16px);
  color:#000;margin:0 0 16px}
 .cloud-label-widget-content{font:14px 'Trebuchet MS',Trebuchet,sans-serif;
+ font-size:var(--nle-lateral,14px);
  line-height:1.4;text-align:justify}
 .cloud-label-widget-content .label-size{display:inline;margin:0 .25em 0 0}
-.cloud-label-widget-content .label-size a{font-size:14px;color:#8c0c0c;
+.cloud-label-widget-content .label-size a{font-size:var(--nle-lateral,14px);color:#8c0c0c;
  text-decoration:none}
 .cloud-label-widget-content .label-size a:hover{color:#353535;text-decoration:underline}
-.cloud-label-widget-content .label-count{font-size:14px;color:#000;white-space:nowrap}
+.cloud-label-widget-content .label-count{font-size:var(--nle-lateral,14px);color:#000;white-space:nowrap}
 .cloud-label-widget-content .clear{clear:both}
 
 #ArchiveList ul.hierarchy{list-style:none;margin:0;padding:0}
@@ -704,7 +714,7 @@ h3.post-title a:hover{color:#353535;text-decoration:underline}
 .post-body div, 
 .post-body font,
 .post-body table td {
-  font-size: 15px !important; /* Tu base para PC */
+  font-size: var(--nle-texto, 15px) !important; /* Tu base para PC */
   line-height: 1.6 !important; 
   font-family: inherit !important; 
   color: inherit !important; 
@@ -730,7 +740,7 @@ h3.post-title a:hover{color:#353535;text-decoration:underline}
 
 /* 3. TÍTULOS DE LAS ENTRADAS (PC) */
 .post-title, .post-title a {
-  font-size: 20px !important; 
+  font-size: var(--nle-titulo, 20px) !important; 
   line-height: 1.3 !important;
 }    
       
@@ -741,7 +751,7 @@ h3.post-title a:hover{color:#353535;text-decoration:underline}
   display: block !important;     
 }
 .jump-link a {
-  font-size: 16px !important;
+  font-size: var(--nle-leer, 16px) !important;
   font-weight: normal !important; 
   font-style: normal !important;   
 }
@@ -755,7 +765,7 @@ h3.post-title a:hover{color:#353535;text-decoration:underline}
       
 /* 5. ETIQUETAS GENERAL (PC) */
 .post-footer, .post-labels, .post-labels a {
-  font-size: 13px !important; /* Achicado para que sea discreto en PC */
+  font-size: var(--nle-etiquetas, 13px) !important; /* Achicado para que sea discreto en PC */
 }
 
 /* 5.1 HOMOGENEIZAR TAMAÑO DE FUENTE EN EL MENÚ LATERAL (PC) */
@@ -765,7 +775,7 @@ h3.post-title a:hover{color:#353535;text-decoration:underline}
 .sidebar .label-size-4, 
 .sidebar .label-size-5,
 .sidebar .label-cloud-content a {
-  font-size: 14px !important; /* Mismo tamaño para todas, sin importar la cantidad de ítems */
+  font-size: var(--nle-lateral, 14px) !important; /* Mismo tamaño para todas, sin importar la cantidad de ítems */
   font-weight: normal !important; /* Quita las negritas automáticas de Blogger */
 }
       
@@ -860,7 +870,7 @@ h3.post-title a:hover{color:#353535;text-decoration:underline}
       
 /* 7.6 FECHA DE LAS ENTRADAS (PC) */
 .date-header, .post-timestamp {
-  font-size: 16px !important;   
+  font-size: var(--nle-fecha, 16px) !important;   
   font-weight: normal !important; 
   letter-spacing: 1px !important; 
 }
